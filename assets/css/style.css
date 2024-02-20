@@ -1,0 +1,291 @@
+
+body {
+    color:black;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(53, 173, 253);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+hr {
+    background-color:black;
+}
+img{
+    border: 2px solid white;
+    border-radius: 20px 20px;
+}
+iframe {
+    padding: 30px;
+    height: 400px;
+    width: 700px;
+    display: block;
+    margin-left: 60px;
+}
+video {
+    position: absolute;
+    top: 50px; right: 190px;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 300px; width: 10px;
+    /* opacity: 0.6; */
+    z-index: -1;
+} 
+#video2 {
+    position: absolute;
+    top: 50px; right: 660px;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 300px; width: 10px;
+    /* opacity: 0.6; */
+    z-index: -1;
+}
+#video3 {
+    position: absolute;
+    top: 50px; left: 750px;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: 300px; width: 10px;
+    /* opacity: 0.6; */
+    z-index: -1;
+}
+
+#video_cover {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.hero-image {
+    /* The image used */
+    /* opacity: 0.8; */
+    /* Set a specific height */
+    height: 250px;
+    background-color:rgb(53, 173, 253);
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    text-align:center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(53, 173, 253);
+    text-shadow: 4px 4px black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    letter-spacing: 7px;
+    word-spacing: 10px;
+    padding-bottom: 25px;
+  
+}
+
+#movie-search {
+    width: 883px;
+    height: 2px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#movie-time {
+    margin-left: 50px;
+    float: left;
+}
+
+#trailer {
+    width: 800px;
+    float: left;
+    margin-right: 70px;
+}
+
+#movie-button-area {
+    padding: 10px 20px 10px 20px;
+
+    background-color: black;
+
+}
+
+.movie-col {
+    padding: 0;
+}
+
+.movie-button-div {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+}
+
+.movie-button {
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-weight: bold;
+    text-shadow: -1px -1px #fff;
+}
+
+.movie-button:hover {
+    background-color: rgb(53, 173, 253);
+}
+
+.movie-button-selected {
+    background-color: rgb(53, 173, 253);
+}
+
+#poster {
+    /* width: 450px; */
+    margin-left: 50px;
+    float: left;
+}
+
+#movie-overview {
+    width: 850px;
+    float: right;
+    margin-right: 70px;
+}
+
+#image-poster {
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 60%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.posterinfo {
+    padding: 12px;
+}
+
+.info {
+    float: left;
+    padding: 12px;
+}
+
+.body {
+    padding: 30px;
+}
+
+.column {
+    float: left;
+}
+
+#leftSide,
+#rightSide {
+    margin-left: 170px;
+}
+
+#goButton,
+#showtimeButton,
+#searchNewMovie {
+    background-color: white;
+    color: black;
+}
+
+#movieInput {
+    color: white;
+    border-color: white;
+}
+#missingInput {
+    color: white;
+    font-weight: bold;
+}
+#goButton, #showtimeButton, #searchNewMovie {
+    /* background-color: rgb(169, 249, 252); */
+    color: white;
+    height: 70px; 
+    width: 70px;   
+    background-image: url(../images/Movie-Camera-Icon.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 16px;
+    border: 3px solid black;
+    border-radius: 70px 70px;
+    background-color: white;
+    font-weight: bold;
+    
+
+}
+#showtimeButton {
+    margin-left:120px;
+}
+
+
+#movie-time {
+    position: relative;
+    background-color: rgb(53, 173, 253);
+    border: 6px solid black;
+    border-radius: 20px 20px;
+    left:50px;
+    width:500px;
+}
+.title {
+    text-align: top;
+    transform: translate(-50%, -50%);
+    color: rgb(31, 30, 30);
+    text-shadow: 4px 4px rgb(53, 173, 253);
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    letter-spacing: 7px;
+    word-spacing: 10px;
+    padding-top: 10px;
+}
+#searchMovieT {
+    color:black;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    word-spacing: 10px;
+    padding: 20px;
+    
+}
+
+#showtimeTable {
+    background-color:black;
+    color:white;
+}
+
+#movie-headers {
+    text-align: center;
+}
+#findM {
+    font-size: 24px;
+}
+@media screen and (max-width: 640px) {
+
+    #movie-search {
+
+        width: 440px;
+        height: 70px;
+
+    }
+
+    #poster {
+    width: 500px;
+
+
+
+    }
+
+    #trailer {
+        margin-left: 50px;
+        width: 500px;
+    }
+
+    iframe {
+        padding: 0px;
+        height: 300px;
+        width: 400px;
+
+    }
+
+    #movie-time {
+
+        width: 500px;
+
+    }
+}

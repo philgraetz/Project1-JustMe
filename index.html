@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieFinder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- google fonts link-->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
+    <!-- materialze  and  style.css link  -->
+
+    <link rel="stylesheet" href="assets/animate.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- tab icon  and  search icons -->
+    <link rel="icon" href="assets/images/pop1.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Find a Movie header -->
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>"Amet Locus"</p>
+            <p id="findM" >Find a movie</p>
+            <video autoplay muted loop>
+                <source src="assets/images/hd0911.mov" type="video/mp4">
+            </video>
+            <div id="video_cover"></div>
+            <video id="video2" autoplay muted loop>
+                <source src="assets/images/hd0911.mov" type="video/mp4">
+            </video>
+            <div id="video_cover"></div>
+            <video id="video3" autoplay muted loop>
+                <source src="assets/images/hd0911.mov" type="video/mp4">
+            </video>
+            <div id="video_cover"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- row to hold the movie poster and movie description-->
+            <div id="omdb" class="col-md-6">
+                <div id="poster" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="text-center animated fadeInLeft title">Movie Overview</h3>
+                    </div>
+
+                    <div id="image-poster"></div>
+                    <!-- ***** THIS IS WHERE THE MOVIE POSTER WILL GO *****  -->
+                    <div class="posterinfo">
+                        <p id="description"> </p>
+                        <!-- ***** THIS IS WHERE THE MOVIE DESCRIPTION WILL GO *****  -->
+
+                    </div>
+
+                    <div class="info">
+                        <p class="" id="rating"></p>
+                        <!-- ***** THIS IS WHERE THE MOVIE RATING WILL GO *****  -->
+                        <p class="" id="runtime"></p>
+                        <!-- ***** THIS IS WHERE THE MOVIE RUNTIME WILL GO *****  -->
+                        <p class="" id="releasedate"></p>
+                        <!-- ***** THIS IS WHERE THE MOVIE RELEASE DATE WILL GO *****  -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="youtube" class="col-md-3">
+                <div id="trailer" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="text-center animated fadeInLeft title">Trailer</h3>
+                    </div>
+
+                    <span class="trailer"></span>
+                    <!-- ***** THIS IS WHERE THE TRAILER WILL GO *****  -->
+                </div>
+            </div>
+
+        </div>
+        <!-- closing tag for row holding the movie poster and overview -->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- row to hold showtime search and table -->
+
+            <div class="col-md-2"></div>
+            <!-- empty div to get row to equal 12 -->
+
+            <div class="col-md-8">
+                <!-- div to hold showtime search and table display -->
+                <div id="movie-time" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 id="searchMovieT" class "text-center">Search For Movies Playing In Theaters</h3>
+                        <hr>
+                        <p id="missingInput"></p>
+                        <div id="zip-search" class="input-group">
+                            <i class="material-icons">add_location</i>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" id="zipCodeField" placeholder="Enter a 5-digit zip code">
+
+                            </div>
+                        </div>
+                        <br>
+                        <div id="pickDate" class="input-group">
+                            <i class="material-icons">date_range</i>
+                            <div class="col-md-6">
+                                <input type="date" class="form-control" id="dateField" placeholder="Choose a date">
+                            </div>
+                        </div>
+                        <br>
+
+                        <span class="input-group-btn animated fadeInLeft" id="searchButtons">
+                            <button class="btn btn-default" id="showtimeButton" type="button">Action!</button>
+                        </span>
+                        </span>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <!-- empty div to get row to equal 12 -->
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center animated fadeInLeft title">Movies Currently In Theaters</h4>
+                <!-- == MOVIE LIST == -->
+                <div id="movie-button-area"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" id="movie-headers">
+                <h5>Movie:</h5>
+            </div>
+            <div class="col-sm-4" id="movie-headers">
+                    <h5>Theatres Playing Your Selected Movie:</h5>
+                </div>
+              
+                <div class="col-sm-4" id="movie-headers">
+                        <h5>Showtimes:</h5>
+                    </div>
+                </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <!-- this is for the table that holds the showtimes results  -->
+                <table style="width:100%" id="showtimeTable">
+                    <tr>
+                        <!-- <th>Movie</th>  -->
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- closing tag for div holding showtime search and table display -->
+    </div>
+
+    <!-- jQuery  and  javascript links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/config.js"></script>
+    <script src="assets/javascript.js"></script>
+
+
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <!-- moment.js  and  materialize js  links-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.2.1/moment.min.js"></script>
+</body>
+
+</html>
